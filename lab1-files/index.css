@@ -6,7 +6,11 @@ body {
 }
 
 .top-bar{
-  max-width: 1190px;
+  position: fixed;
+  top: 0; left: 0;
+  right: 0;
+  z-index: 100;
+  height: 46px;
 }
 
 /* TODO: Create CSS for your Twitter Mockup */
@@ -16,9 +20,9 @@ ul {
   padding: 0;
   background-color: #525252;
   display: flex;
-  position: fixed;
+  /*position: fixed;
   top: 0; left: 0;
-  z-index: 100;
+  z-index: 100;*/
 }
 
 ul li a {
@@ -46,6 +50,7 @@ ul li a:hover {
   margin: 56px auto;
   background-color: #E6ECF0;
   display: flex;
+  justify-content: center;
 }
 .Content-Left {
   width: 290px;
@@ -58,23 +63,44 @@ ul li a:hover {
 .Profile_Pic img {
   border: blue 10px;
   border-radius: 50%;
-  max-width: 99px; 
+  max-width: 80px; 
 }
 
 .Content-Center {
-
+  width: 500px;
 }
 
 .Content-Right{
   width: 290px;
-  height: 400px;
+  height: 330px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.follow-button {
+  color: rgb(45, 194, 244);
+  border: 2px solid rgb(45, 194, 244);
+  border-radius: 20px;
+  padding: 7px;
+  width: 80px;
+  text-align: center;
 }
 
 .profile-suggestion {
   display: flex;
+  gap: 10px;
+}
+
+.placeholder {
+  height: 20px;
+}
+
+.at {
+  color: rgb(120, 120, 120);
+  font-size: 16px;
 }
 
 .line {
