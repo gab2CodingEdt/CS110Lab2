@@ -11,6 +11,11 @@ body {
   right: 0;
   z-index: 100;
   height: 46px;
+  background-color: #525252;
+}
+
+.nav-elements {
+  margin-top: 10px;
 }
 
 /* TODO: Create CSS for your Twitter Mockup */
@@ -18,7 +23,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #525252;
   display: flex;
   /*position: fixed;
   top: 0; left: 0;
@@ -64,10 +68,28 @@ ul li a:hover {
   border: blue 10px;
   border-radius: 50%;
   max-width: 80px; 
+  margin-top: 10px;
 }
 
 .Content-Center {
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.tweet {
+  height: 100px;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.tweet-content {
+  margin-left: 10px;
 }
 
 .Content-Right{
