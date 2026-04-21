@@ -5,7 +5,9 @@ body {
   background-color: #e6ecf0;
 }
 
-
+.skip-link {
+  display: none;
+}
 
 /* TODO: Create CSS for your Twitter Mockup */
 .navbar {
@@ -39,6 +41,16 @@ body {
 
 .item {
   margin: 0 15px 0 0; /* Adjusted slightly so the left side is flush, pushing margin to the right */
+  border-bottom-width: 2px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-color: white;
+}
+
+.item:hover {
+  border-color: #2258c3;
 }
 
 .item a {
@@ -165,9 +177,9 @@ button:hover {
 
 
 .Profile_Pic img {
-  border: blue 10px;
   border-radius: 50%;
-  max-width: 80px; 
+  width: 80px; 
+  height: 80px;
   margin-top: 10px;
 }
 
@@ -200,6 +212,12 @@ button:hover {
   flex-direction: column;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .Content-Right {
+    display: none;
+  }
 }
 
 .follow-button {

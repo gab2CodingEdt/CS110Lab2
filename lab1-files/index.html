@@ -9,7 +9,8 @@
 
 <body>
   <header>
-    <div>
+    <div role="navigation">
+      <a href="#main-content" class="skip-link">Jump to main content</a>
     <nav class="navbar">
 
       <ul class="menu">
@@ -31,7 +32,7 @@
   </header>
 
   <!-- TODO: Create HTML elements for Twitter mockup inside body -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" id="main-content">
     <div class="content-left">
 
   <div class="cover-picture">
@@ -63,11 +64,11 @@
   </div>
 
 </div>
-    <div class="Content-Center">
+    <div class="Content-Center" role="main">
       <div class="tweet">
         <div class="Profile_Pic"><img src="./images/ratatouille.jpg"></div>
         <div class="tweet-content"><p><b>Remy</b> <small class="at">@Remy Nov 19</small></p>
-        <p>I'm taking this class called CS110 and the TAs are all so cool!</p></div>
+        <p>I'm taking this class called CS110 and the TAs are all so <span style="font-weight: bold">cool</span>!</p></div>
       </div>
 
       <hr class="line">
