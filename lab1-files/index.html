@@ -8,38 +8,61 @@
 </head>
 
 <body>
-  <header class="top-bar">
-    <div class="nav-elements">
-      <ul> <!--Taken from W3Schools, navbar-->
-      <li><a href="#home">Home</a></li>
-      <li><a href="#moments">Moments</a></li>
-      <li><a href="#notifications">Notifications</a></li>
-      <li><a href="#messages">Messages</a></li>
-      <li class="Icon"><a href="#Icon"> <!--Probably can make this an element that centers on center of header-->
-          <img src="./images/twitter-logo.png" width="65rem" height="50rem">
-        </a>
-      </li>
-      <li class="Tweet"><a href="#tweet">Tweet</a></li>
-    </ul>
+  <header>
+    <div>
+    <nav class="navbar">
+
+      <ul class="menu">
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">Moments</a></li>
+        <li class="item"><a href="#">Notifications</a></li>
+        <li class="item"><a href="#">Messages</a></li>
+      </ul>
+
+      <img
+        src="./images/twitter-logo.png"
+        alt="Logo"
+        class="logo"
+      />
+
+      <button>Tweet</button>
+    </nav>
     </div>
   </header>
 
   <!-- TODO: Create HTML elements for Twitter mockup inside body -->
   <div class="content-wrapper">
-    <div class="Content-Left">
-      <div> <!--Cover Picture-->
-        <img src="./images/ratatouille-banner.png">
-      </div>
-      <div class="Profile_Pic"> <!--Profile Picture-->
-        <img src="./images/ratatouille.jpg">
-      </div>
-      <p><u><b>Remy</b></u></p>
-      <p><br>@Remy</p>
-      <div> <!--Profile Stats-->
-        <p> <b>Tweets, Following, Followers</b> <br></p>
-        <p class="profile-stats"> 3074, 324, 809</p>
-      </div>
+    <div class="content-left">
+
+  <div class="cover-picture">
+    <img src="./images/ratatouille-banner.png" alt="Cover Banner">
+  </div>
+
+  <div class="profile-info-row">
+    <div class="profile-pic">
+      <img src="./images/ratatouille.jpg" alt="Remy">
     </div>
+    <div class="profile-text">
+      <p class="name"><u><b>Remy</b></u></p>
+      <p class="handle">@remy</p>
+    </div>
+  </div>
+  <div class="profile-stats">
+    <div class="stat">
+      <span class="stat-label">Tweets</span>
+      <span class="stat-value">5049</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Following</span>
+      <span class="stat-value">324</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Followers</span>
+      <span class="stat-value">809</span>
+    </div>
+  </div>
+
+</div>
     <div class="Content-Center">
       <div class="tweet">
         <div class="Profile_Pic"><img src="./images/ratatouille.jpg"></div>
