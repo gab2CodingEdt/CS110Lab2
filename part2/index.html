@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Highlander Day Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body>
+    <script src="form.js"></script>
+
+    <form>
+        <label for="fname">First Name: </label><br>
+        <input type="text" id="fname" name="fname" onblur="validateName(this, 'Your first name must only consist of letters and cannot be empty.')"><span class="message"></span><br>
+
+        <label for="lname">Last Name: </label><br>
+        <input type="text" id="lname" name="lname" onblur="validateName(this, 'Your last name must only consist of letters and cannot be empty.')"><span class="message"></span><br>
+
+        <label for="dob">Date of Birth: </label><br>
+        <input type="text" id="dob" name="dob" onblur="validateBirthDate(this, 'You must enter a valid birth date in the form MM/DD/YYYY and be at least 16 years old.')"><span class="message"></span><br>
+
+        <label for="college">College: </label><br>
+        <select id="college" name="college" onclick="getMajors()">
+            <option value="bcoe">BCOE</option>
+            <option value="cnas">CNAS</option>
+            <option value="chass">CHASS</option>
+            <option value="sob">SOB</option>
+            <option value="spp">SPP</option>
+            <option value="soe">SOE</option>
+        </select><br>
+
+        <label for="major">Major: </label><br>
+        <select id="major" name="major">
+        </select><br>
+
+        <script>
+            getMajors();
+        </script>
+
+        <label for="phonenum">Phone Number: </label><br>
+        <input type="text" id="phonenum" name="phonenum" onblur="validatePhone(this, 'The phone number must consist of ten digits.')"><span class="message"></span><br>
+
+        <label for="email">Email Address: </label><br>
+        <input type="text" id="email" name="email" onblur="validateEmail(this, 'The input must be a vaid email.')"><span class="message"></span><br>
+
+        <input type="checkbox" id="subscribe" name="subscribe" value="Subscribe">
+        <label for="subscribe">I want to subscribe to UCR Events!</label><br>
+
+        <label for="guests">Number of Guests: </label><br>
+        <input type="number" id="guests" name="guests" onblur="validateGuests(this, 'The number of guests must be at least 1.')"><span class="message"></span><br>
+
+
+        <br>
+        <input type="submit" value="Submit">
+
+        <button type="button" onclick="resetForm()">Reset</button>
+
+
+
+    </form>
+
+
+</body>
+
+
+
+
+
+
+</html>
