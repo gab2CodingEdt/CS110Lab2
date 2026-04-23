@@ -44,7 +44,7 @@
         <input type="text" id="phonenum" name="phonenum" onblur="validatePhone(this, 'The phone number must consist of ten digits.')"><span class="message"></span><br>
 
         <label for="email">Email Address: </label><br>
-        <input type="text" id="email" name="email" onblur="validateEmail(this, 'The input must be a vaid email.')"><span class="message"></span><br>
+        <input type="text" id="email" name="email" onblur="validateEmail(this, 'The input must be a valid email.')"><span class="message"></span><br>
 
         <input type="checkbox" id="subscribe" name="subscribe" value="Subscribe">
         <label for="subscribe">I want to subscribe to UCR Events!</label><br>
@@ -54,7 +54,7 @@
 
 
         <br>
-        <button type="button" onclick="submitForm()">Submit</button>
+        <button type="button" onclick="submitForm()" id="submit" disabled>Submit</button>
 
         <button type="button" onclick="resetForm()">Reset</button>
 
