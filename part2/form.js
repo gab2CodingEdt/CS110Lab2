@@ -2,7 +2,9 @@
 function getMajors() {
     var majors = document.getElementById("major");
     var college = document.getElementById("college").value;
-    if (college == "bcoe") {
+    if (college == "default"){
+        majors.innerHTML = "<option value=\"Select a college\">Blank</option>";
+    } else if (college == "bcoe") {
         majors.innerHTML = "<option value=\"compsci\">Computer Science</option> <option value=\"compeng\">Computer Engineering</option>";
     } else if (college == "cnas") {
         majors.innerHTML = "<option value=\"biology\">Biology</option> <option value=\"chemistry\">Chemistry</option> <option value=\"mathematics\">Mathematics</option>";
@@ -22,24 +24,28 @@ function resetForm() {
     for (var i = 0; i < inputs.length; i++) {
         switch (inputs[i].type) {
             case 'text':
-                inputs[i].value = '';
-                break;
             case 'number':
+            case 'email': 
                 inputs[i].value = '';
                 break;
             case 'checkbox':
+            case 'radio':
                 inputs[i].checked = false;
                 break;
         }
+        inputs[i].style = "border-color: ''; border-width: '';";
+        inputs[i].nextSibling.innerHTML = "";
     }
-
     var college = document.getElementById("college");
     college.selectedIndex = 0;
-
-    getMajors();
-
+    
+    if (typeof getMajors === 'function') {
+        getMajors();
+    }
     var major = document.getElementById("major");
-    major.selectedIndex = 0;
+    if (major) {
+        major.selectedIndex = 0;
+    }
 }
 
 function validateName(control, errormessage) {
@@ -52,7 +58,7 @@ function validateName(control, errormessage) {
     } else {
         error = errormessage;
         document.getElementById(control.id).nextSibling.innerHTML=errormessage;
-        document.getElementById(control.id).focus();
+       // document.getElementById(control.id).focus();
         document.getElementById(control.id).style = "border-color: red; border-width: 4px;";
     }
 }
@@ -67,7 +73,7 @@ function validatePhone (control, errormessage) {
     } else {
         error = errormessage;
         document.getElementById(control.id).nextSibling.innerHTML=errormessage;
-        document.getElementById(control.id).focus();
+        //document.getElementById(control.id).focus();
         document.getElementById(control.id).style = "border-color: red; border-width: 4px;";
     }
 }
@@ -81,7 +87,7 @@ function validateGuests(control, errormessage) {
     } else {
         error = errormessage;
         document.getElementById(control.id).nextSibling.innerHTML=errormessage;
-        document.getElementById(control.id).focus();
+        //document.getElementById(control.id).focus();
         document.getElementById(control.id).style = "border-color: red; border-width: 4px;";
     }
 }
@@ -93,7 +99,7 @@ function validateEmail (control, errormessage) {
     if (!/[a-zA-Z0-9]+@[a-zA-Z0-9]+\.(com)|(edu)|(gov)/.test(control.value) ) {
         error = errormessage;
         document.getElementById(control.id).nextSibling.innerHTML=errormessage;
-        document.getElementById(control.id).focus();
+       // document.getElementById(control.id).focus();
         document.getElementById(control.id).style = "border-color: red; border-width: 4px;";
     }
     return error;
@@ -127,7 +133,7 @@ function validateBirthDate (control, errormessage) {
     if (!matches) {
         error = errormessage;
         document.getElementById(control.id).nextSibling.innerHTML=errormessage;
-        document.getElementById(control.id).focus();
+       // document.getElementById(control.id).focus();
         document.getElementById(control.id).style = "border-color: red; border-width: 4px;";
     }
     return error;
