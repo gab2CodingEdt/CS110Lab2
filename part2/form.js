@@ -2,7 +2,9 @@
 function getMajors() {
     var majors = document.getElementById("major");
     var college = document.getElementById("college").value;
-    if (college == "bcoe") {
+    if (college == "default"){
+        majors.innerHTML = "<option value=\"Select a college\">Blank</option>";
+    } else if (college == "bcoe") {
         majors.innerHTML = "<option value=\"compsci\">Computer Science</option> <option value=\"compeng\">Computer Engineering</option>";
     } else if (college == "cnas") {
         majors.innerHTML = "<option value=\"biology\">Biology</option> <option value=\"chemistry\">Chemistry</option> <option value=\"mathematics\">Mathematics</option>";
