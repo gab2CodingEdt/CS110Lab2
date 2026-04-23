@@ -38,7 +38,7 @@ function resetForm() {
     }
     var college = document.getElementById("college");
     college.selectedIndex = 0;
-    
+
     if (typeof getMajors === 'function') {
         getMajors();
     }
@@ -47,7 +47,29 @@ function resetForm() {
         major.selectedIndex = 0;
     }
 }
+function submitForm() {
+    // 1. Grab the actual input DOM elements
+    var fnameInput = document.getElementById("fname");
+    var lnameInput = document.getElementById("lname");
+    var dobInput = document.getElementById("dob");
+    var emailInput = document.getElementById("email");
+    var phoneInput = document.getElementById("phonenum");
+    var guestInput = document.getElementById("guests");
 
+    var fnameResult = validateName(fnameInput, "");
+    var lnameResult = validateName(lnameInput,"");
+    var dobResult = validateBirthDate(dobInput,"");
+    var emailResult = validateEmail(emailInput,"");
+    var phoneResult = validatePhone(phoneInput,"");
+    var guestResult = validateGuests(guestInput,"");
+
+    if (fnameResult === "" && lnameResult == "" && dobResult == "" && emailResult == "" && phoneResult == "" && guestResult == "") {
+        
+        // Success! Process your form data here, then reset.
+        alert("Form submitted successfully!");
+        resetForm();
+    }
+}
 function validateName(control, errormessage) {
     var error="";
     var name = /^[a-zA-Z]+$/;
