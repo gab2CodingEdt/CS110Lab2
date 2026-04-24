@@ -234,6 +234,11 @@ button:hover {
   text-align: center;
 }
 
+.follow-button:hover {
+  background-color: rgb(10, 55, 94);
+  border-color: rgb(10, 55, 94);
+}
+
 .profile-suggestion {
   display: flex;
   gap: 10px;
